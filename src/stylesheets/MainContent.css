@@ -1,0 +1,29 @@
+main {
+    height: 60%;
+    width: 65%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+    border-radius: 25px;
+}
+
+.image-side{
+    height: 100%;
+    width: 45%;
+}
+
+.text-side {
+    height: 100%;
+    width: 55%;
+}
+
+.image-side {
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    /* background-size: 80% 80%; */
+    background-size: 850px 900px;
+    background-position-x: right;
+    background-position-y: 10px;
+}
