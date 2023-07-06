@@ -15,11 +15,19 @@
     margin-bottom: 5%;
 }
 
+.question-box:hover {
+    cursor: pointer;
+}
+
 .question-text {
     font-size: 1rem;
     margin: 0;
     font-weight: 400;
     color: gray;
+}
+
+.icon-arrow .active {
+    transform: rotate(180deg)
 }
 
 .answer-text {
@@ -31,7 +39,7 @@
     margin-bottom: 5%;
 }
 
-.answer-text .off {
+.off {
     display: none;
 }
 
