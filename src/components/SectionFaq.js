@@ -30,16 +30,11 @@ function SectionFaq() {
           }
 
           setDatabase(copyDataBase)
-
-          // console.log(database)    
         }
 
         const handleClassAnswer = () => {
           const copyDataBase = [...database]
-
           const findId = copyDataBase.findIndex((element) => element.id === info.id);
-
-          console.log(findId)
 
           if (copyDataBase[findId].isSelected == true) {
             return 'answer-text'
@@ -48,12 +43,33 @@ function SectionFaq() {
           }
         }
 
+        const handleClassQuestion = () => {
+          const copyDataBase = [...database]
+          const findId = copyDataBase.findIndex((element) => element.id === info.id);
+
+          if (copyDataBase[findId].isSelected == true) {
+            return 'question-text active'
+          } else {
+            return 'question-text'
+          }
+        }
+
+        const handleClassIcon = () => {
+          const copyDataBase = [...database]
+          const findId = copyDataBase.findIndex((element) => element.id === info.id);
+
+          if (copyDataBase[findId].isSelected == true) {
+            return 'icon-arrow active'
+          } else {
+            return 'icon-arrow'
+          }
+        }
 
         return (
           <section className='single-faq-container'>
             <div className='question-box' onClick={handleClickQuestion}>
-              <h4 className='question-text'>{info.question}</h4>
-              <img src={iconArrow} className='icon-arrow'/>
+              <h4 className={handleClassQuestion()}>{info.question}</h4>
+              <img src={iconArrow} className={handleClassIcon()}/>
             </div>
             <p className={handleClassAnswer()}>{info.answer}</p>
             <hr></hr>

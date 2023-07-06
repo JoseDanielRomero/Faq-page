@@ -4,7 +4,6 @@ import MainContent from './components/MainContent';
 import { v4 as uuidv4 } from 'uuid';
 
 export const DatabaseContext = createContext([])
-export const ActualFaqContext = createContext('')
 
 function App() {
 
@@ -41,8 +40,6 @@ function App() {
     }
   ])
 
-  const [selectedFaq, setSelectedFaq] = useState('')
-
   return (
     <DatabaseContext.Provider
       value={{
@@ -50,11 +47,9 @@ function App() {
         setDatabase
       }}
     >
-      <ActualFaqContext.Provider value={selectedFaq}>
-        <div className="App">
+      <div className="App">
           <MainContent />
-        </div>
-      </ActualFaqContext.Provider>
+      </div>
     </DatabaseContext.Provider>
   );
 }

@@ -51,9 +51,14 @@ main {
 .text-box {
     height: 90%;
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
 }
 
 .main-title {
     font-size: 1.8rem;
-    margin-top: 4%;
+    color: hsl(238, 29%, 16%);
 }

@@ -24,16 +24,27 @@
     margin: 0;
     font-weight: 400;
     color: gray;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.icon-arrow .active {
+.question-text.active {
+    font-weight: 700;
+    color: hsl(238, 29%, 16%);
+}
+
+.icon-arrow.active {
     transform: rotate(180deg)
 }
 
 .answer-text {
     width: 100%;
     font-size: .9rem;
-    color: gray;
+    color: rgb(152, 151, 151);
     line-height: 1.2rem;
     margin-top: 0;
     margin-bottom: 5%;
@@ -47,5 +58,6 @@ hr {
     width: 100%;
     margin-top: 0;
     margin-bottom: 5%;
+    border: .7px solid hsl(240, 5%, 91%);
 }
 
